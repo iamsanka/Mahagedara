@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #5D4037;
+  /* Brown */
+  background-color: #fff8f0;
+  /* Warm off-white */
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  /* Content stays below menu */
+  transition: transform 0.3s ease;
+}
+
+/* When menu is open, push content down */
+.menu-open .main-content {
+  transform: translateY(100vh);
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Add this to your index.html head or import in index.js */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');

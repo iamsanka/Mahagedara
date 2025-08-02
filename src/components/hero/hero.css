@@ -1,0 +1,71 @@
+.hero {
+    padding: 120px 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../../images/background-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #FFD700;
+    /* Gold accent */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #D2691E;
+    /* Chocolate */
+    color: white;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #FFD700;
+    /* Gold */
+}
+
+.primary-btn:hover {
+    background-color: #A0522D;
+    /* Sienna */
+    transform: translateY(-2px);
+}
+
+.secondary-btn:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    /* Gold with opacity */
+    transform: translateY(-2px);
+}

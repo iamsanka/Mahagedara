@@ -1,0 +1,116 @@
+.experience-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.experience-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 60px;
+}
+
+.experience-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.experience-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.experience-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-image img:hover {
+    transform: scale(1.02);
+}
+
+.experience-content {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    /* Ensure all content is left-aligned */
+}
+
+.experience-content h1,
+.experience-content h2 {
+    color: #8B4513;
+    /* Sienna */
+    margin-bottom: 20px;
+    text-align: left;
+    /* Explicit left alignment for headings */
+}
+
+.experience-content h1 {
+    font-size: 2.5rem;
+}
+
+.experience-content h2 {
+    font-size: 2rem;
+}
+
+.experience-content p {
+    color: #5D4037;
+    /* Brown */
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    text-align: left;
+    /* Explicit left alignment for paragraphs */
+}
+
+.explore-btn {
+    display: inline-block;
+    background-color: #D2691E;
+    /* Chocolate */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #D2691E;
+    text-align: center;
+}
+
+.explore-btn:hover {
+    background-color: transparent;
+    color: #D2691E;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(210, 105, 30, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .experience-row,
+    .experience-row.reverse {
+        flex-direction: column;
+        margin-bottom: 60px;
+        gap: 30px;
+    }
+
+    .experience-content h1 {
+        font-size: 2rem;
+    }
+
+    .experience-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .experience-image {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .explore-btn {
+        padding: 10px 25px;
+    }
+}
