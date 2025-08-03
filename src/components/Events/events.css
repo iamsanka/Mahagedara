@@ -1,0 +1,27 @@
+/* events.css */
+
+.slider-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 0px;
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.event-image:hover {
+    transform: scale(1.01);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import "./contact.css";
 import {
   FaEnvelope,
@@ -10,19 +11,25 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("mrblalbv"); // Replace with your Formspree form ID
+
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
         <h2 className="section-title">Contact Us</h2>
 
         <div className="contact-content">
-          {/* Contact Information */}
+          {/* Contact Information (unchanged) */}
           <div className="contact-info">
             <div className="info-card">
               <FaEnvelope className="contact-icon" />
               <div>
                 <h3>Email</h3>
-                <a href="mailto:iamsankadesilva@gmail.com">
+                <a
+                  href="mailto:mahagedara@gmail.com?subject=Inquiry&body=Hello, I would like to ask about..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   mahagedara@gmail.com
                 </a>
               </div>
@@ -32,7 +39,13 @@ const Contact = () => {
               <FaPhoneAlt className="contact-icon" />
               <div>
                 <h3>Phone</h3>
-                <a href="tel:+358449465409">+358 45 173 0018</a>
+                <a
+                  href="https://wa.me/358451730018"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +358 45 173 0018
+                </a>
               </div>
             </div>
 
@@ -40,7 +53,13 @@ const Contact = () => {
               <FaMapMarkerAlt className="contact-icon" />
               <div>
                 <h3>Location</h3>
-                <p>Maasälväntie 5-9, 00741 Helsinki</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Maasälväntie+5-9,+00741+Helsinki"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Maasälväntie 5-9, 00741 Helsinki
+                </a>
               </div>
             </div>
 
@@ -53,27 +72,77 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <form className="contact-form">
+          {/* Updated Contact Form */}
+          <form className="contact-form" onSubmit={handleSubmit}>
             <h3>Send Us a Message</h3>
-            <div className="form-group">
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div className="form-group">
-              <input type="email" placeholder="Your Email" required />
-            </div>
-            <div className="form-group">
-              <textarea placeholder="Your Message" rows="5" required></textarea>
-            </div>
-            <button type="submit" className="submit-btn">
-              Send Message
-            </button>
+
+            {state.succeeded ? (
+              <div className="form-success">
+                Thank you! Your message has been sent successfully.
+              </div>
+            ) : (
+              <>
+                <div className="form-group">
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                  />
+                  <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                  />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your Message"
+                    rows="5"
+                  />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="submit-btn"
+                  disabled={state.submitting}
+                >
+                  {state.submitting ? "Sending..." : "Send Message"}
+                </button>
+              </>
+            )}
           </form>
         </div>
 
         {/* Social Media */}
         <div className="social-media">
-          <a href="#" aria-label="Facebook">
+          <a
+            href="https://www.facebook.com/profile.php?id=100089887830631"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaFacebook />
           </a>
           <a href="#" aria-label="Instagram">

@@ -42,20 +42,26 @@ const Navbar = () => {
       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
         <li>
           <a href="#experience" onClick={() => setIsMenuOpen(false)}>
-            Products
+            Who We Are
           </a>
         </li>
         <li>
-          <a href="#">Services</a>
+          <a href="#food-slider" onClick={() => setIsMenuOpen(false)}>
+            Our Foods
+          </a>
         </li>
         <li>
-          <a href="#">Blog</a>
+          <a href="#events-slider" onClick={() => setIsMenuOpen(false)}>
+            Gallery
+          </a>
         </li>
         <li>
-          <a href="#">Gallery</a>
+          <a href="#">Testimonials</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            Contact Us
+          </a>
         </li>
       </ul>
     </nav>

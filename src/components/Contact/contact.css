@@ -6,6 +6,7 @@
     background-position: center;
     position: relative;
     color: #5D4037;
+    z-index: 0;
 }
 
 .contact-section::before {
@@ -171,6 +172,22 @@
     border-top: 1px solid #eee;
     color: #5D4037;
     font-size: 0.9rem;
+}
+
+.form-success {
+    color: #2E7D32;
+    background-color: #E8F5E9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ValidationError {
+    color: #C62828;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
 }
 
 /* Responsive Design */
