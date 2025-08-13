@@ -1,3 +1,14 @@
+:root {
+  --primary-purple: #6A0DAD;
+  /* Deep purple */
+  --secondary-purple: #4B0082;
+  /* Indigo */
+  --light-purple: #E6E6FA;
+  /* Lavender for backgrounds */
+  --accent-gold: #D4AF37;
+  /* Gold for accents */
+}
+
 html {
   scroll-behavior: smooth;
 }

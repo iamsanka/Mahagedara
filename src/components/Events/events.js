@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "./events.css"; // Import the styles
 
 // Generate image paths dynamically
-const imageCount = 4; // You can adjust this if you add more images
+const imageCount = 26; // You can adjust this if you add more images
 const images = Array.from({ length: imageCount }, (_, i) => ({
   src: require(`../../images/events/event${i + 1}.jpg`),
   alt: `Event ${i + 1}`,
@@ -22,6 +22,7 @@ const EventsSlider = () => {
     dots: false,
     pauseOnHover: false,
     fade: true,
+    adaptiveHeight: true, // This helps with varying image heights
   };
 
   return (

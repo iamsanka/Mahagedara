@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "./foodSlider.css";
-import image1 from "../../images/experience1.jpg";
+import kottuRoti from "../../images/foodSlider/kottuRoti.jpg";
+import lamprais from "../../images/foodSlider/lampRice.jpg";
+import biriyani from "../../images/foodSlider/biriyani.jpg";
+import yellowRice from "../../images/foodSlider/yellowRice.jpg";
+import hoppers from "../../images/foodSlider/hoppers.jpg";
 
 // Add these arrow components at the top of your file (after imports)
 const NextArrow = (props) => {
@@ -29,63 +33,67 @@ const PrevArrow = (props) => {
 const foodItems = [
   {
     id: 1,
-    name: "Kottu",
-    image: image1,
+    name: "Kottu Roti",
+    description: "Available with Eggs, Checkn, Pork and Prawns",
+    image: kottuRoti,
     ingredients: [
       "Chopped roti",
       "Mixed vegetables",
       "Eggs",
-      "Chicken or beef (optional)",
-      "Carrots, leeks, and cabbage",
-      "Sri Lankan curry powder",
-      "Chili flakes",
-      "Soy sauce",
-      "Salt to taste",
+      "Onions",
+      "Carrots",
+      "Sri Lankan spices",
     ],
   },
   {
     id: 2,
-    name: "Traditional Sri Lankan Hoppers",
-    image: image1,
+    name: "Lamprais",
+    description: "Available with Checkn, Pork and Prawns",
+    image: lamprais,
     ingredients: [
-      "Rice flour",
-      "Coconut milk",
-      "Yeast",
-      "Sugar",
-      "Salt",
-      "Warm water",
-      "Pandan leaf (for fragrance)",
+      "Lapmrais",
+      "Cashew Curry",
+      "Brinjol Moju",
+      "Seeni Sambol",
+      "Boiled Egg",
+      "Fish Cutlet",
+      "Sri Lankan spices",
     ],
   },
   {
     id: 3,
-    name: "Spicy Kottu Roti",
-    image: image1,
+    name: "Biriyani",
+    description: "Available with Checkn, Mutton and Prawns",
+    image: biriyani,
     ingredients: [
-      "Fresh godamba roti",
-      "Chicken or mutton",
-      "Garlic and ginger paste",
-      "Green chilies",
-      "Curry leaves",
-      "Onions",
-      "Tomatoes",
-      "Sri Lankan roasted curry powder",
+      "Cashew & Green Peas Curry",
+      "Minchi Sambol",
+      "Raita & Onion Sambol",
+      "Boiled Egg",
+      "Sri Lankan spices",
     ],
   },
   {
-    id: 3,
-    name: "Spicy Kottu Roti",
-    image: image1,
+    id: 4,
+    name: "Yellow Rice",
+    description: "Available with Checkn and Prawns",
+    image: yellowRice,
     ingredients: [
-      "Fresh godamba roti",
-      "Chicken or mutton",
-      "Garlic and ginger paste",
-      "Green chilies",
-      "Curry leaves",
-      "Onions",
-      "Tomatoes",
-      "Sri Lankan roasted curry powder",
+      "Yellow Rice",
+      "Dhal Curry",
+      "Mango Curry",
+      "Potato Tempered",
+      "Seeni Sambol",
+      "Fish Cutlet",
+      "Sri Lankan spices",
     ],
+  },
+  {
+    id: 5,
+    name: "Hoppers",
+    description: "Available with Eggs, Honey, Cheese and Egg Masala",
+    image: hoppers,
+    ingredients: ["Rice Flour", "Milk", "Sri Lankan spices"],
   },
   // Add more items as needed
 ];
@@ -94,16 +102,23 @@ const FoodSlider = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  console.log("Modal state:", {
+    isOpen: isModalOpen,
+    selectedItem: selectedItem?.name,
+  });
+
   const handleOpenModal = (item) => {
+    console.log("Opening modal for item:", item.name);
     setSelectedItem(item);
     setIsModalOpen(true);
     document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
   };
 
   const handleCloseModal = () => {
+    console.log("Closing modal");
     setIsModalOpen(false);
     setSelectedItem(null);
-    document.body.style.overflow = "unset"; // Re-enable scrolling
+    document.body.style.overflow = "unset";
   };
 
   const settings = {
@@ -113,7 +128,9 @@ const FoodSlider = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: false,
-    focusOnSelect: true,
+    accessibility: true,
+    adaptiveHeight: false,
+    focusOnSelect: false,
     variableWidth: false,
     cssEase: "ease",
     nextArrow: <NextArrow />,
@@ -188,14 +205,19 @@ const FoodSlider = () => {
               className="modal-food-image"
             />
 
-            <h3>{selectedItem.name} Ingredients</h3>
-            <ul className="ingredients-list">
-              {selectedItem.ingredients.map((ingredient, index) => (
-                <li key={index}>
-                  <span className="ingredient-text">{ingredient}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="modal-header">
+              <h3>{selectedItem.name}</h3>
+              {selectedItem.description && (
+                <p className="food-description">{selectedItem.description}</p>
+              )}
+            </div>
+            <div className="modal-content-wrapper">
+              <ul className="ingredients-list">
+                {selectedItem.ingredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       )}

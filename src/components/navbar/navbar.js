@@ -56,9 +56,6 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#">Testimonials</a>
-        </li>
-        <li>
           <a href="#contact" onClick={() => setIsMenuOpen(false)}>
             Contact Us
           </a>

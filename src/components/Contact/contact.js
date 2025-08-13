@@ -145,7 +145,12 @@ const Contact = () => {
           >
             <FaFacebook />
           </a>
-          <a href="#" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/mahagedara.jyk2023/?igsh=MXUxazIzN3UzdjJyZA%3D%3D&utm_source=ig_contact_invite#"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
           </a>
         </div>
