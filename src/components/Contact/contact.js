@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("mrblalbv"); // Replace with your Formspree form ID
+  const [state, handleSubmit] = useForm("mqaljzwd"); // Replace with your Formspree form ID
 
   return (
     <section className="contact-section" id="contact">
@@ -26,11 +26,11 @@ const Contact = () => {
               <div>
                 <h3>Email</h3>
                 <a
-                  href="mailto:mahagedara@gmail.com?subject=Inquiry&body=Hello, I would like to ask about..."
+                  href="mailto:Mahagedara.jyk2023@gmail.com?subject=Inquiry&body=Hello, I would like to ask about..."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  mahagedara@gmail.com
+                  Mahagedara.jyk2023@gmail.com
                 </a>
               </div>
             </div>

@@ -6,6 +6,7 @@ import lamprais from "../../images/foodSlider/lampRice.jpg";
 import biriyani from "../../images/foodSlider/biriyani.jpg";
 import yellowRice from "../../images/foodSlider/yellowRice.jpg";
 import hoppers from "../../images/foodSlider/hoppers.jpg";
+//import { waitFor } from "@testing-library/dom";
 
 // Add these arrow components at the top of your file (after imports)
 const NextArrow = (props) => {
@@ -132,7 +133,14 @@ const FoodSlider = () => {
     adaptiveHeight: false,
     focusOnSelect: false,
     variableWidth: false,
-    cssEase: "ease",
+    cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1)",
+    fade: false,
+    waitForAnimate: true,
+    useCSS: true,
+    arrows: true,
+    initialSlide: 0,
+    edgeFriction: 25, // Controls "stickiness" at edges
+    swipeToSlide: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [

@@ -11,9 +11,14 @@
 
 .section-title {
     text-align: center;
-    color: #8B4513;
+    color: var(--primary-purple);
     font-size: 2.5rem;
     margin-bottom: 30px;
+}
+
+.section-title::after {
+    background: #6A0DAD;
+    /* Deep purple underline */
 }
 
 .slider-container {
@@ -24,6 +29,20 @@
 .slick-list {
     margin: 0 -5px;
 }
+
+.slick-slide {
+    transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 500ms ease;
+}
+
+.slick-active {
+    opacity: 1 !important;
+}
+
+.slick-slide:not(.slick-active) {
+    opacity: 0.7;
+    /* Optional: slight fade for non-active slides */
+}
+
 
 .slick-slide>div {
     padding: 0 5px;
@@ -84,7 +103,7 @@
 }
 
 .ingredients-btn {
-    background-color: #D2691E;
+    background-color: var(--primary-purple);
     color: white;
     border: none;
     padding: 12px 20px;
@@ -97,7 +116,7 @@
 }
 
 .ingredients-btn:hover {
-    background-color: #A0522D;
+    background-color: var(--secondary-purple);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(210, 105, 30, 0.3);
 }
@@ -107,7 +126,7 @@
 .slick-next {
     width: 30px;
     height: 30px;
-    background: rgba(139, 69, 19, 0.9) !important;
+    background: var(--primary-purple) !important;
     border-radius: 50%;
     transition: all 0.3s ease;
     z-index: 10;
@@ -196,7 +215,7 @@
 }
 
 .modal-content-wrapper::-webkit-scrollbar-thumb {
-    background: #d4a762;
+    background: #62d48e;
     border-radius: 4px;
 }
 

@@ -10,13 +10,15 @@ import pkg3 from "../../images/packages/pkg3.jpg";
 import promo1 from "../../images/promotions/promo1.jpg";
 import promo2 from "../../images/promotions/promo2.jpg";
 import promo3 from "../../images/promotions/promo3.jpg";
+import promo4 from "../../images/promotions/promo4.jpg";
+import promo5 from "../../images/promotions/promo5.jpg";
 
 const Hero = () => {
   const [popupType, setPopupType] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const promotionImages = [promo1, promo2, promo3];
+  const promotionImages = [promo1, promo2, promo3, promo4, promo5];
   const partyPackageImages = [pkg1, pkg2, pkg3];
 
   useEffect(() => {

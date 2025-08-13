@@ -43,7 +43,7 @@
 
 .experience-content h1,
 .experience-content h2 {
-    color: #8B4513;
+    color: var(--primary-purple);
     /* Sienna */
     margin-bottom: 20px;
     text-align: left;
@@ -70,7 +70,7 @@
 
 .explore-btn {
     display: inline-block;
-    background-color: #D2691E;
+    background-color: var(--primary-purple);
     /* Chocolate */
     color: white;
     padding: 12px 30px;
@@ -78,15 +78,16 @@
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid #D2691E;
+    border: 2px solid var(--primary-purple);
     text-align: center;
 }
 
 .explore-btn:hover {
     background-color: transparent;
-    color: #D2691E;
+    color: var(--primary-purple);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(210, 105, 30, 0.3);
+    border: 2px solid var(--primary-purple);
 }
 
 /* Responsive adjustments */
