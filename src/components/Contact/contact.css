@@ -73,7 +73,13 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     max-width: 100%;
+    text-align: left;
     /* Ensure cards don't overflow */
+}
+
+.info-card div {
+    width: 100%;
+    /* Ensure the text container takes full width */
 }
 
 .info-card:hover {
@@ -117,7 +123,7 @@
 
 .contact-form h3 {
     margin-top: 0;
-    color: #8B4513;
+    color: var(--secondary-purple);
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
@@ -190,10 +196,22 @@
     }
 
     .info-card {
-        padding: 20px;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        text-align: left;
+
+        /*padding: 20px*/
+    }
+
+    .info-card div {
+        text-align: left;
+        /* Explicit left alignment for text */
     }
 
     .contact-form {
+        margin-top: 0;
+        flex-shrink: 0;
         padding: 20px;
     }
 
@@ -217,12 +235,20 @@
     }
 
     .info-card {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 15px;
+        align-items: left;
+        text-align: left;
+    }
+
+    .info-card div {
+        text-align: left;
+        /* Explicit left alignment for text */
     }
 
     .contact-icon {
         margin-top: 0;
+        flex-shrink: 0;
     }
 }
 
