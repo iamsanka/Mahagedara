@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./hero.css";
 
 // Party Packages Images
-import pkg1 from "../../images/packages/pkg1.jpg";
-import pkg2 from "../../images/packages/pkg2.jpg";
-import pkg3 from "../../images/packages/pkg3.jpg";
-import pkg4 from "../../images/packages/pkg4.jpg";
-import pkg5 from "../../images/packages/pkg5.jpg";
-import pkg6 from "../../images/packages/pkg6.jpg";
-import pkg7 from "../../images/packages/pkg7.jpg";
+import pkg1 from "../../images/packages/pkg1.jpeg";
+import pkg2 from "../../images/packages/pkg2.jpeg";
+import pkg3 from "../../images/packages/pkg3.jpeg";
+import pkg4 from "../../images/packages/pkg4.jpeg";
+import pkg5 from "../../images/packages/pkg5.jpeg";
+import pkg6 from "../../images/packages/pkg6.jpeg";
+import pkg7 from "../../images/packages/pkg7.jpeg";
 
 // Promotions Images
 import promo1 from "../../images/promotions/promo1.jpg";
