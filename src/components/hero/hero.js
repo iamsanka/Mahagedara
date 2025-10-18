@@ -5,6 +5,10 @@ import "./hero.css";
 import pkg1 from "../../images/packages/pkg1.jpg";
 import pkg2 from "../../images/packages/pkg2.jpg";
 import pkg3 from "../../images/packages/pkg3.jpg";
+import pkg4 from "../../images/packages/pkg4.jpg";
+import pkg5 from "../../images/packages/pkg5.jpg";
+import pkg6 from "../../images/packages/pkg6.jpg";
+import pkg7 from "../../images/packages/pkg7.jpg";
 
 // Promotions Images
 import promo1 from "../../images/promotions/promo1.jpg";
@@ -19,7 +23,7 @@ const Hero = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const promotionImages = [promo1, promo2, promo3, promo4, promo5];
-  const partyPackageImages = [pkg1, pkg2, pkg3];
+  const partyPackageImages = [pkg1, pkg2, pkg3, pkg4, pkg5, pkg6, pkg7];
 
   useEffect(() => {
     const handleResize = () => {
