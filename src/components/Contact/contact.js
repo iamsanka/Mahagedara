@@ -30,7 +30,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Mahagedara.jyk2023@gmail.com
+                  info@mahagedara.com
                 </a>
               </div>
             </div>
@@ -54,11 +54,11 @@ const Contact = () => {
               <div>
                 <h3>Location</h3>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Maasälväntie+5-9,+00741+Helsinki"
+                  href="https://share.google/jI1E2V3KF6vjIKoyI"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Maasälväntie 5-9, 00741 Helsinki
+                  Pertunpellonraitti 3 A 20 00740 Helsinki
                 </a>
               </div>
             </div>
